@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+
+	<title>Canvas Follow Mouse</title>
+	
+		<style>
+			canvas {
+			border: #333 10px solid;
+			}
+			 
+			body {
+			padding: 50px;
+			}
+		</style>
+</head>
+
+ 
+<body>
+
+	<canvas id="myCanvas" width="500px" height="500px"></canvas>
+ 
+		<script>
+			
+		
+			
+			var canvas = document.querySelector("#myCanvas");
+			var context = canvas.getContext("2d");
+			
+			
+						
+			var canvasPos = getPosition(myCanvas); 
+			var mouseX = 0; 
+			var mouseY = 0; 
+			
+			
+			
+			var sqSize = 50; 
+			var xPos = 500; 
+			var yPos = 500; 
+			var dX = 0;	
+			var dY = 0; 
+			
+			
+			
+		setInterval(onTimerTick, 33); 
+			
+			function onTimerTick() { 
+			
+	
+			
+				var lives = 3; 
+				
+				canvas.width = canvas.width; 
+			
+				var object1 = {x:75, y:75, width:50, height:50 }; 
+				
+			
+			
+			 
+				
+				
+				
+	 
+	
+				
+			}
+			
+			
+			
+			
+			
+		
+			function getPosition(el) { 
+			
+				var xPosition = 0; 
+				var yPosition = 0; 
+			 
+				while (el) { 
+					xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft); 
+					yPosition += (el.offsetTop - el.scrollTop + el.clientTop); 
+					el = el.offsetParent;
+				}
+				return {
+					x: xPosition, 
+					y: yPosition, 
+				};
+			}   
+		</script>
+ 
+</body>
+ 
+</html>
